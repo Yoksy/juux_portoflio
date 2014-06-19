@@ -3,26 +3,45 @@
 @import "bourbon/bourbon";
 @import "bourbon/neat/neat";
 
+/* Font-face */
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+
 /*==== Variables ====*/
 $min-width: 960px;
 $max-width: 1440px;
 
+
 /* Font-size */
 $font-size-base: 14px;
-$font-size-h1: em(38px, $font-size-base);
-$font-size-alpha: em(24px, $font-size-base);
-$font-size-beta: em(18px, $font-size-base);
-$font-size-gamma: em(14px, $font-size-base);
-$font-size-delta: em(12px, $font-size-base);
+$font-size-alpha: em(30px, $font-size-base);
+$font-size-beta: em(20px, $font-size-base);
+$font-size-gamma: em(16px, $font-size-base);
+$font-size-delta: em(13px, $font-size-base);
+$font-size-epsilon: em(12px, $font-size-base);
+
+/* Colors */
+$color-lightgrey: #bec3c7;
+$color-grey: #808b8d;
+$color-blue-juux: #87bbba;
 
 body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #222;
+    line-height: 0;  
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster Two', Helvetica, Arial, sans-serif;
 }
 
 h1 {
-    font-size: $font-size-h1;
+    font-size: $font-size-alpha;
 }
 
 .browsehappy {
@@ -40,7 +59,7 @@ h1 {
     line-height: 0;
     height: 0;
 }
- 
+
 .clearfix {
     display: inline-block;
 }
@@ -56,10 +75,70 @@ html[xmlns] .clearfix {
 /*==== Main styles ====*/
 .wrapper {
     @include outer-container();
+    line-height: normal;
 }
 
 [role=banner],
 [role=contentinfo] {
-  background-color: lightgrey;
   width: 100%;
+  background-color: #FFF;
+}
+
+header {
+
+    [role=navigation] {
+        text-align: center;
+
+        a {
+            display: inline-block;
+            font-size: $font-size-beta;
+            font-family: 'Lobster Two', Helvetica, Arial, sans-serif;
+            color: $color-lightgrey;
+            padding: 0 32px;
+            text-decoration: none;
+
+            &:hover, &:focus {
+                color: $color-grey;
+            }
+
+            &:after {
+                display: inline-block;
+                content: '';
+                width: 1px;
+                height: 16px;
+                border-right: 1px solid $color-grey;
+                padding-right: 32px;
+            }
+        }
+    }
+}
+
+[role=main] {
+    .outer-section {
+        width: 100%;
+    }
+
+    .inner-section {
+        
+    }
+}
+
+.outer-section {
+    background-size: cover;
+}
+
+#section-earth { 
+    background-image: url("/images/bg-earth.jpg");
+
+
+}
+
+#section-verdon { background-image: url("/images/bg-verdon.jpg"); }
+#section-bolivia { background-image: url("/images/bg-bolivia.jpg"); }
+#section-ecuador { background-image: url("/images/bg-ecuador.jpg"); }
+
+[role=contentinfo] {
+    .wrapper {
+        text-align: center;
+    }
 }
