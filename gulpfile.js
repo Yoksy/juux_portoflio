@@ -43,7 +43,7 @@ gulp.task('html', ['styles', 'scripts'], function () {
 });
 
 gulp.task('images', function () {
-    return gulp.src('app/images/**/*')
+    return gulp.src(['app/images/*.jpg', 'app/images/*.png', 'app/images/*.gif'])
         .pipe($.cache($.imagemin({
             optimizationLevel: 3,
             progressive: true,
