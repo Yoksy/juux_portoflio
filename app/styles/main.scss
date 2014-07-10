@@ -40,6 +40,11 @@ $font-size-epsilon: em(12px, $font-size-base);
 $color-lightgrey: #bec3c7;
 $color-grey: #808b8d;
 $color-blue-juux: #87bbba;
+$color-rgba-blue-juux: rgba($color-blue-juux, 0.5);
+
+h1 {
+    background-color: $color-rgba-blue-juux;
+}
 
 /*==== Mixins ====*/
 @mixin background-rgba($red, $green, $blue, $opacity, $rgba) {
@@ -112,8 +117,8 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: $lobster;
-    font-weight: lighter;
+    font-family: $dosis;
+    font-weight: bold;
     letter-spacing: 1px;
     margin: 0;
 }
@@ -131,7 +136,7 @@ h3 {
     font-size: $font-size-beta;
 }
 
-p {
+p,li{
     font-family: $dosis;
 }
 
@@ -147,6 +152,10 @@ a {
 ul {
     margin: 0;
     padding: 0;
+}
+
+li {
+
 }
 
 .browsehappy {
@@ -208,7 +217,7 @@ html[xmlns] .clearfix {
             position: relative;
             display: inline-block;
             font-size: $font-size-beta;
-            font-family: $lobster;
+            font-family: $dosis;
             color: $color-lightgrey;
             padding: 0 32px;
             text-decoration: none;
@@ -313,27 +322,32 @@ html[xmlns] .clearfix {
 }
 
 #project-aude {
-    //@include span-columns(5);
-    @include omega();
+
 }
-
-
-
 
 #project-cifamily {
-    //@include span-columns(7);
-}
-
-#project-ipsos {
-    //@include span-columns(5);
-    @include omega();
     
 }
 
+#project-ipsos {
+    
+}
 
-#section-about { background-image: url("/images/bg-verdon.jpg"); }
+/*#section-about { background-image: url("/images/bg-verdon.jpg"); }*/
 #section-world { background-image: url("/images/bg-ecuador.jpg"); }
+#worldmap-about{
+    .block {
+        &:nth-child(1) {
+            @include span-columns(5 of 7);
+        }
+        &:nth-child(2) {
+            @include span-columns(2 of 7);
 
+        }
+        
+    }
+
+}
 
 /* Blocks */
 .block {
@@ -346,14 +360,6 @@ html[xmlns] .clearfix {
     text-align: right;
 }
 
-.content-block {
-    padding: 24px;
-
-    p {
-        margin: 0;
-    }
-}
-
 /* Grid */
 .grid-section {
     width: 100%;
@@ -363,9 +369,11 @@ html[xmlns] .clearfix {
     }
 }
 
+.grid-column-4 { @include span-columns(4); }
 .grid-column-5 { @include span-columns(5); }
 .grid-column-7 { @include span-columns(7); }
 .grid-column-12 { @include span-columns(12); }
+.omega { @include omega(); }
 
 .grid-layout-alpha {
     .block {
@@ -432,8 +440,11 @@ html[xmlns] .clearfix {
 
 /* Elements */
 .content-block {
+    display: inline-block;
     $opacity: 0.8;
-    @include border-radius(8px);
+    @include border-radius(3px);
+    padding: 24px 24px 0;
+    text-decoration: none;
 
     &.white {
         background: rgba(255, 255, 255, $opacity);
@@ -450,6 +461,19 @@ html[xmlns] .clearfix {
             color: #FFF;
         }
     }
+
+    p {
+        margin: 0 0 12px;
+    }
+
+    .img-placeholder {
+
+    }
+
+}
+
+.img-placeholder img {
+    max-width: 100%;
 }
 
 .picto {
@@ -548,19 +572,30 @@ height: 150px;color: black;
 }
 */
 
-.heart{
+.heart {
 	font-family:'Dosis Regular', Helvetica, Arial, sans-serif;
-	
-	float:left;
-	 list-style-image : url(../images/heart.png);
-	 float: left;
-	 margin-left:3%;
-	
+    line-height: 9px;
 	 
+	li{
+        list-style-image : url(../images/heart.png);
+        margin-left: 15px;
+
+    }
+	
 }
-#ul_heart{
-    margin-left: 15%
+.flags1{
+    list-style-image : url(../images/flagfr.png);
 }
+
+.flags2{
+    list-style-image : url(../images/flages.png);
+}
+.flags3{
+    list-style-image : url(../images/flagfrpetit.png);
+
+}
+                                   
+
 
 .title_juux{
 	margin-top: 1%;
@@ -568,32 +603,28 @@ height: 150px;color: black;
 	padding-bottom: 1%;
 }
 
-li{
 
-	font-family: $dosis;
-}
 .mohini{
 	vertical-align: bottom;
 }
 
 .flags{
-	width: 50px;
-	height: 50px;
+	@include size(20px);
 	border: none;
 }
 .flags img{
-	width: 20px;
-	height: 20px;
+    @include size(20px);
 	border: white;
 }
 
 #flags {
 	float:left;
+    padding: 0px;
 }
 
 .content_li{
 	
-	 background-color: rgba(135, 187, 186, 0.5);
+	 
 }
 
 #img_map{
@@ -610,4 +641,22 @@ li{
     width: 50%;
     height: 50%;
     float: left;
+}
+
+.animate:target {
+    animation: moveDown 0.6s ease-in-out 0.2s backwards;
+}
+@keyframes moveDown{
+    0% { 
+        transform: translateY(-40px); 
+        opacity: 0;
+    }
+    100% { 
+        transform: translateY(0px);  
+        opacity: 1;
+    }
+
+    .bottom{
+        margin-bottom: 40px;
+    }
 }
