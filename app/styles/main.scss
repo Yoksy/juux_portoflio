@@ -48,6 +48,9 @@ $color-blue-juux: #87bbba;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$rgba}',endColorstr='#{$rgba}');
     zoom: 1;
 }
+footer{
+	background-color: #ecf0f1;
+}
 
 @mixin border-radius($radius) {
     -webkit-border-radius: $radius;
@@ -174,13 +177,15 @@ html[xmlns] .clearfix {
     height: 1%;
 }
 
-.cell { display: inline-block; *display: inline; zoom: 1; vertical-align: middle; }
+.cell { display: inline-block; *display: inline; zoom: 1; margin-top:5%; }
 .hack-valign{ display: inline-block; *display: inline; zoom: 1;  height: 100%; vertical-align: middle; }
 
 /*==== Main styles ====*/
 .outer-wrapper {
     @include outer-container();
     line-height: 0;
+    
+    
 }
 
 [role=banner],
@@ -428,7 +433,7 @@ html[xmlns] .clearfix {
 /* Elements */
 .content-block {
     $opacity: 0.8;
-    @include border-radius(1px);
+    @include border-radius(8px);
 
     &.white {
         background: rgba(255, 255, 255, $opacity);
@@ -527,4 +532,82 @@ html[xmlns] .clearfix {
 
 .icon-french-flag {
 
+}
+/* about */
+
+.align_text{text-align: justify;}
+/*
+#right_bloc_about{
+height: 300px;color:black;background: black;border: 1px solid red;
+}
+#left_bloc_about_down{
+height: 150px;color: black;
+}
+#left_bloc_about_up{
+height: 150px;color: black;
+}
+*/
+
+.heart{
+	font-family:'Dosis Regular', Helvetica, Arial, sans-serif;
+	
+	float:left;
+	 list-style-image : url(../images/heart.png);
+	 float: left;
+	 margin-left:3%;
+	
+	 
+}
+#ul_heart{
+    margin-left: 15%
+}
+
+.title_juux{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	padding-bottom: 1%;
+}
+
+li{
+
+	font-family: $dosis;
+}
+.mohini{
+	vertical-align: bottom;
+}
+
+.flags{
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+.flags img{
+	width: 20px;
+	height: 20px;
+	border: white;
+}
+
+#flags {
+	float:left;
+}
+
+.content_li{
+	
+	 background-color: rgba(135, 187, 186, 0.5);
+}
+
+#img_map{
+    width:60%;
+    height: 60%;
+    float:left;
+}
+
+#travel{
+    width: 50%;
+    float:left;
+}
+#content_img_map{
+    width: 50%;
+    height: 50%;
+    float: left;
 }

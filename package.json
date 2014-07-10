@@ -28,5 +28,23 @@
   },
   "engines": {
     "node": ">=0.10.0"
-  }
+  },
+  "description": "portfolio juux",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Djeezy/juux_portoflio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Juux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Djeezy/juux_portoflio/issues"
+  },
+  "homepage": "https://github.com/Djeezy/juux_portoflio"
 }
