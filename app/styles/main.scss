@@ -11,9 +11,11 @@
   font-weight: 400;
   src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
 }
-@font-face{
-    font-family: 'Raleway', sans-serif;
-
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), url(http://themes.googleusercontent.com/static/fonts/raleway/v7/IczWvq5y_Cwwv_rBjOtT0w.woff) format('woff');
 }
 
 @font-face {
@@ -263,6 +265,27 @@ html[xmlns] .clearfix {
         left: 0;
         padding-top: 0;
         padding-bottom: 0;
+    }
+}
+/* Slideshow */
+.banner {
+    img {
+        width: 100%;
+    }
+
+    ul, li { width: 100%; }
+
+    li {
+        overflow: hidden;
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+
+    &.active li {
+        display: block;
     }
 }
 
