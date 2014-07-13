@@ -575,6 +575,8 @@ height: 150px;color: black;
 .heart {
 	font-family:'Dosis Regular', Helvetica, Arial, sans-serif;
     line-height: 9px;
+    
+    padding-left:15px;
 	 
 	li{
         list-style-image : url(../images/heart.png);
@@ -583,6 +585,13 @@ height: 150px;color: black;
     }
 	
 }
+
+.heart1{
+background-color: rgba(135, 187, 186, 0.5);
+
+
+}
+
 .flags1{
     list-style-image : url(../images/flagfr.png);
 }
@@ -611,6 +620,7 @@ height: 150px;color: black;
 .flags{
 	@include size(20px);
 	border: none;
+    border-right: white 1px solid;
 }
 .flags img{
     @include size(20px);
@@ -620,12 +630,13 @@ height: 150px;color: black;
 #flags {
 	float:left;
     padding: 0px;
+    border-right: white 1px solid;
 }
 
-.content_li{
-	
-	 
-}
+
+.bottom{
+        margin-bottom: 40px;
+    }
 
 #img_map{
     width:60%;
@@ -642,11 +653,19 @@ height: 150px;color: black;
     height: 50%;
     float: left;
 }
+.trad{
+
+}
+.paris{
+    margin-bottom:15px;
+    background-color: rgba(135, 187, 186, 0.5);
+
+}
 
 .animate:target {
     animation: moveDown 0.6s ease-in-out 0.2s backwards;
 }
-@keyframes moveDown{
+/*@keyframes moveDown{
     0% { 
         transform: translateY(-40px); 
         opacity: 0;
@@ -656,7 +675,5 @@ height: 150px;color: black;
         opacity: 1;
     }
 
-    .bottom{
-        margin-bottom: 40px;
-    }
-}
+    
+}*/
