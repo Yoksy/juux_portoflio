@@ -1,8 +1,8 @@
 /*==== Imports ====*/
 /* Libraries */
 @import "vendor/normalize";
-@import "bourbon/bourbon";
-@import "bourbon/neat/neat";
+@import "../bower_components/bourbon/dist/bourbon";
+@import "../bower_components/neat/app/assets/stylesheets/neat";
 
 /* Font-face */
 @font-face {
@@ -10,6 +10,10 @@
   font-style: normal;
   font-weight: 400;
   src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaIbN6UDyHWBl620a-IRfuBk.woff) format('woff');
+}
+@font-face{
+    font-family: 'Raleway', sans-serif;
+
 }
 
 @font-face {
@@ -42,19 +46,12 @@ $color-grey: #808b8d;
 $color-blue-juux: #87bbba;
 $color-rgba-blue-juux: rgba($color-blue-juux, 0.5);
 
-h1 {
-    background-color: $color-rgba-blue-juux;
-}
-
 /*==== Mixins ====*/
 @mixin background-rgba($red, $green, $blue, $opacity, $rgba) {
     background-color: transparent;
     background-color: rgba($red, $green, $blue, $opacity);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$rgba}',endColorstr='#{$rgba}');
     zoom: 1;
-}
-footer{
-	background-color: #ecf0f1;
 }
 
 @mixin border-radius($radius) {
@@ -255,12 +252,17 @@ html[xmlns] .clearfix {
     }
 
     .wrapper {
+        @include size(100%);
+        line-height: normal;
+        padding: 4%;
+    }
+
+    .wrapper-abs {
         position: absolute;
         top: 0;
         left: 0;
-        @include size(100%);
-        line-height: normal;
-        padding: 0 4%;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -273,7 +275,7 @@ html[xmlns] .clearfix {
     }
 
     .wrapper {
-        //padding: 111px 24px;
+        /*padding: 111px 24px;*/
     }
 
     .left-block, .right-block { height: 100%; }
@@ -368,10 +370,17 @@ html[xmlns] .clearfix {
         margin-bottom: 10px;
     }
 }
-
+.grid-column-1 { @include span-columns(1); }
+.grid-column-2 { @include span-columns(2); }
+.grid-column-3 { @include span-columns(3); }
 .grid-column-4 { @include span-columns(4); }
 .grid-column-5 { @include span-columns(5); }
+.grid-column-6 { @include span-columns(6); }
 .grid-column-7 { @include span-columns(7); }
+.grid-column-8 { @include span-columns(8); }
+.grid-column-9 { @include span-columns(9); }
+.grid-column-10 { @include span-columns(10); }
+.grid-column-11 { @include span-columns(11); }
 .grid-column-12 { @include span-columns(12); }
 .omega { @include omega(); }
 
@@ -577,6 +586,8 @@ height: 150px;color: black;
     line-height: 9px;
     
     padding-left:15px;
+
+
 	 
 	li{
         list-style-image : url(../images/heart.png);
@@ -588,8 +599,20 @@ height: 150px;color: black;
 
 .heart1{
 background-color: rgba(135, 187, 186, 0.5);
+padding-top: 10px;
+padding-bottom: 10px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
 
-
+.heart2{
+background-color: rgba(135, 187, 186, 0.5);
+padding-top: 3px;
+padding-bottom: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 }
 
 .flags1{
@@ -677,3 +700,40 @@ background-color: rgba(135, 187, 186, 0.5);
 
     
 }*/
+
+/* slide */
+.banner { position: relative; overflow: auto; }
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+/*slide */
+.h1welcome{
+font-family: 'Raleway';
+text-align: center;
+font-size: 62px;
+padding-bottom: 20px;
+}
+
+.h2welcome{
+    text-align: center;
+    font-size: 20px;
+}
+.img_contact{
+    width: 46px;
+    height: 46px;
+    float: left;
+    padding-top:20px;
+}
+.nom_contact{
+
+   padding-top:20px;
+   padding-left: 30px; 
+   font-style: bold;
+}
+
+.a_contact{
+    color:black;
+    font-family: 'dosis';
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration:none;
+}

@@ -19,6 +19,7 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+       
     </head>
     <body
 >        <!--[if lt IE 10]>
@@ -41,11 +42,22 @@
         </header>
 
         <section class="outer-wrapper" role="main">
+<!-- test slide-->
+           
+        <!-- test slide-->
             <div id="section-welcome" class="outer-section clearfix">
-                <img src="images/header_3.png"/>
-    </div>
-                <div class="wrapper">
-                    <!-- <div class="left-block">
+
+                 <div class="banner">
+    <ul>
+        <li><img src="images/header_3.png"/></li>
+        <li><img src="images/header_2.png"/></li>
+        <li><img src="images/bg-bolivia.jpg"/></li>
+    </ul>
+</div>
+                
+            </div>
+                <!-- <div class="wrapper">
+                    <div class="left-block">
                         <div class="content-block white cell">
                             <h1>Welcome citizen of the world!</h1>
                             <p>You've just land in the MzelleJuux Universe, welcome home ! </p>
@@ -85,23 +97,30 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>-->
+                            </div>
                         </div><span class="hack-valign"></span>
+                    </div>
+                </div>
+            </div>-->
+
+            <div id="section-welcome-2" class="outer-section clearfix">
+
+                <div class="wrapper">
+                    <div class="inner-section grid-section">
+
+                        <h1 class="h1welcome">WELCOME CITIZEN OF THE WORLD !</h1>
+                        <h2 class="h2welcome">You've just land in Mzelle Juux Universe ! <br/>
+                            And welcome ! Let's see some of my works, and a little more about that earth ! :)
+                        </h2>
+
                     </div>
                 </div>
             </div>
 
-            <div id="section-welcome" class="outer-section clearfix">
-                <h1>WELCOME CITIZEN OF THE WORLD :)</h1>
-                <h2>You've just land in Mzelle Juux Universe ! <br/>
-                    And welcome ! Let's see some of my works, and a little more about that earth ! :)
-                </h2>
-
-            </div>    
             <div id="section-work" class="outer-section clearfix">
                 <img src="images/bg-bolivia.jpg" alt="">
-                <div class="wrapper">
 
+                <div class="wrapper wrapper-abs">
                     <div class="inner-section grid-section cell">
                        
                         <a href="" id="project-sony" class="content-block white grid-column-4 grid-layout-alpha bottom">
@@ -146,28 +165,34 @@
                                 <img class="mohini" src="images/mohini.png" width="" alt="">
                             </div>
                         </a>
+
                     </div><span class="hack-valign"></span>
                 </div>
             </div>
+
             <div id="section-about" class="outer-section clearfix">
                 <img src="images/paraloup.png" alt="">
-                <div class="wrapper">
+
+                <div class="wrapper wrapper-abs">
                     <div class="inner-section grid-section cell">
                                         
 	                    <div id="worldmap-about" class="content-block white grid-column-7">
                             <div class="block">
                                 <h3 class="title_juux">Works and inspiration around the world ...</h3>
                                
-                                <div align="middle">
+                                <div align="middle grid-column-3" >
                                     <img src="images/map.png" />
                                 </div>
                                  <p class="align_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed tincidunt orci, ac pretium justo. Donec sollicitudin leo vel ante aliquam rhoncus. Integer eu auctor dui,</p>
                                 <br/>
                             </div>
+                            <div class="block grid-column-1" >
+                                <img src="">
+                            </div>    
                             <div class="block">
                                 <h3 class="">Jobs positions</h3>
-                                 <div class="heart1">
-                                <ul class="heart" class="paris">
+                                 <div class="heart2">
+                                <ul class="heart">
                                     <li class="paris">Paris</li>
                                 </ul>
                                 </div>
@@ -215,12 +240,12 @@ So do not hesitate to contact me.</p><a align="right" href="#section-test">Conta
                 </div>
             </div>
             
-            <div id="section-test" class="outer-section clearfix">
+            <div id="section-contact" class="outer-section clearfix">
                 <img src="images/canoa.png" alt="">
-                <div class="wrapper">
+                <div class="wrapper wrapper-abs">
                     <div class="inner-section grid-section cell">
                                         
-	                    <div id="testblock18" class="content-block white grid-column-4">
+	                    <div id="testblock18" class="content-block white grid-column-6">
 	                    	<h3>Contact</h3>
 	                    	<div>
 	                    		<div style="float:left;"><img src="images/juux_contact.png"></div>
@@ -230,7 +255,7 @@ So do not hesitate to contact me.</p><a align="right" href="#section-test">Conta
 	                    	<br/><br/>
 	                    	
                 			<ul style="list-style:none; border-left:10px;">
-                    			<li style="list-style:none; border-left:10px;"><img src="images/pictomail.png"/><a href="mailto:jullietteblouin@gmail.com">&nbsp; Jullietteblouin@gmail.com </a></li>
+                    			<li style="list-style:none; border-left:10px;" class="a_contact"><img src="images/pictomail.png"/><a class="a_contact" href="mailto:jullietteblouin@gmail.com">&nbsp; Jullietteblouin@gmail.com </a></li>
                     			<li style="list-style:none; border-left:10px;"><img src="images/pictotel.png"/>&nbsp; +33667539191</li>
                     			<li style="list-style:none; border-left:10px;"><img src="images/pictolieu.png"/>&nbsp;  International</li>
                     			<li><img src="images/pictolieu.png"/>&nbsp; Paris</li>
@@ -239,18 +264,19 @@ So do not hesitate to contact me.</p><a align="right" href="#section-test">Conta
                 			</ul>
 	                    </div>
 
-                        <div id="testblock19" class="content-block white grid-column-4">
+                        <div id="testblock19" class="content-block white grid-column-3">
                             <h3>...Besoin d'un dév ? </h3>
                             <div class="bisounours">
-                                <div>
+                           
+                                     <p class="img_contact">
                                 <img src="images/arielou.png"><br/>
-                                </div>
-                                <div><p>&nbsp; &nbsp; Ariel Dorol</p>
+                            </p>
+                            <div><p class="nom_contact">&nbsp; &nbsp; Ariel Dorol</p>
                                 <p>&nbsp; &nbsp; Développeur Front & Back</p></div>
                                 
                                 <div>
                                     <ul style="list-style:none;">
-                                        <li style="list-style:none;"><img src="images/pictomail.png"/><a href="mailto:i.a.dorol@gmail.com">&nbsp; i.a.dorol@gmail.com </a></li>
+                                        <li style="list-style:none;" class="a_contact"><img src="images/pictomail.png"/><a class="a_contact" href="mailto:i.a.dorol@gmail.com">&nbsp; i.a.dorol@gmail.com </a></li>
                                         <li><img src="images/pictotel.png"/>&nbsp; +33667539191</li>
                                         <li><img src="images/pictolieu.png"/>&nbsp; Paris</li>
                                         <li><img src="images/adresse.png"/>&nbsp; 84 bd de Brandebourg</li>
@@ -261,13 +287,15 @@ So do not hesitate to contact me.</p><a align="right" href="#section-test">Conta
                             </div>
                         </div>
 
-                        <div id="testblock20"  class="content-block white grid-column-4 omega">
+                        <div id="testblock20"  class="content-block white grid-column-3 omega">
                             <h3>...Besoin d'un dév ? </h3>
+                        <p class="img_contact">
                             <img src="images/jemy.png">
-                            <p>Jeremy Delhaie</p>
-                            <p>Développeur Front & Back</p>
+                        </p>
+                            <p class="nom_contact">&nbsp; &nbsp;Jeremy Delhaie</p>
+                            <p>&nbsp; &nbsp;Développeur Front & Back</p>
                             <ul style="list-style:none;">
-                                <li style="list-style:none;"><img src="images/pictomail.png"/><a href="mailto:Jeremy.dehlaie@gmail.com">&nbsp; Jeremy.dehlaie@gmail.com </a></li>
+                                <li style="list-style:none;" class="a_contact"><img src="images/pictomail.png"/><a class="a_contact" href="mailto:Jeremy.dehlaie@gmail.com">&nbsp; Jeremy.dehlaie@gmail.com </a></li>
                                 <li><img src="images/pictotel.png"/>&nbsp; +33603627404</li>
                                 <li><img src="images/pictolieu.png"/>&nbsp; Paris</li>
                                 <li><img src="images/adresse.png"/>&nbsp; 84 bd de Brandebourg</li>                        
@@ -298,7 +326,16 @@ So do not hesitate to contact me.</p><a align="right" href="#section-test">Conta
         <script src="bower_components/jquery/dist/jquery.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
-
+ <!-- Appel JS slide-->
+       <script src="//unslider.com/unslider.min.js"></script>
+        <!-- Appel JS slide-->
+        <script type="text/javascript">$(function() {
+    $('.banner').unslider({
+        speed: 500,
+        delay: 1000,
+        fluid: true 
+    });
+});</script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
