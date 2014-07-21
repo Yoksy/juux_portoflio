@@ -1,9 +1,38 @@
+"use strict";
+
 $(document).ready(function(){
 	scrollAnchor();
+
+	$(".fancybox").fancybox({
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		autoSize: false,
+		width: 960,
+		arrows : true,
+		helpers : {
+        	overlay : {
+	            css : {
+	                'background' : 'rgba(255, 255, 255, 0.7)'
+	            }
+        	}
+    	}
+	});
+	// $("#slides").slidesjs({
+ //    	width: 940,
+ //    	height: 528,
+ //    	navigation: {
+ //    		active: true,
+ //    		effect: "slide"
+ //    	},
+ //    	pagination: {
+ //    		active: true,
+ //    		effect: "slide"
+ //    	}
+ //    });
 });
 
 function scrollAnchor() {
-	$('a[href^=#]').on("click",function(e){
+	$('a[href^=#]').not('.fancybox').on("click",function(e){
 	    var t= $(this.hash);
 	    var t=t.length&&t||$('[name='+this.hash.slice(1)+']');
 	    if(t.length){

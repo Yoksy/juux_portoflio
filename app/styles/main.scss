@@ -3,6 +3,7 @@
 @import "vendor/normalize";
 @import "../bower_components/bourbon/dist/bourbon";
 @import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "jquery.fancybox.css";
 
 /* Font-face */
 @font-face {
@@ -111,9 +112,10 @@ body {
     font-family: $helvetica;
     color: #222;
     line-height: 0;
+    text-align: center;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: $dosis;
     font-weight: bold;
     letter-spacing: 1px;
@@ -131,6 +133,10 @@ h2 {
 
 h3 {
     font-size: $font-size-beta;
+    text-align: center;
+}
+h4{
+    text-align: center;
 }
 
 p,li{
@@ -186,6 +192,8 @@ html[xmlns] .clearfix {
 .cell { display: inline-block; *display: inline; zoom: 1; margin-top:5%; }
 .hack-valign{ display: inline-block; *display: inline; zoom: 1;  height: 100%; vertical-align: middle; }
 
+.fullwidth { width: 100%; }
+
 /*==== Main styles ====*/
 .outer-wrapper {
     @include outer-container();
@@ -232,7 +240,7 @@ html[xmlns] .clearfix {
                 content: '';
                 width: 1px;
                 height: 16px;
-                border-right: 1px solid $color-grey;
+                
             }
         }
     }
@@ -383,7 +391,19 @@ html[xmlns] .clearfix {
 .grid-column-11 { @include span-columns(11); }
 .grid-column-12 { @include span-columns(12); }
 .omega { @include omega(); }
-
+.grid-column-4-of-6{@include span-columns(4 of 6);}
+.grid-column-2-of-6{@include span-columns(2 of 6);}
+.grid-column-4-of-7{@include span-columns(4 of 7);}
+.grid-column-3-of-7{@include span-columns(3 of 7);}
+.grid-column-5-of-7{@include span-columns(5 of 7);}
+.grid-column-2-of-7{@include span-columns(2 of 7);}
+.grid-column-4-of-8{@include span-columns(4 of 8);}
+.grid-column-3-of-8{@include span-columns(3 of 8);}
+.grid-column-5-of-8{@include span-columns(5 of 8);}
+.grid-column-2-of-8{@include span-columns(2 of 8);}
+.grid-column-5-of-8{@include span-columns(5 of 8);}
+.grid-column-1-of-3{@include span-columns(1 of 3);}
+.grid-column-2-of-3{@include span-columns(1 of 3);}
 .grid-layout-alpha {
     .block {
         &:nth-child(1) {
@@ -583,22 +603,43 @@ height: 150px;color: black;
 
 .heart {
 	font-family:'Dosis Regular', Helvetica, Arial, sans-serif;
-    line-height: 9px;
     
-    padding-left:15px;
+    text-align: left;
+    float:left;
+    width:100%;
+    padding-bottom: 24px;
+
+    
+    
+    
 
 
 	 
 	li{
-        list-style-image : url(../images/heart.png);
-        margin-left: 15px;
+        
+        line-height: 19px;
+        
+       
 
     }
 	
+
 }
 
+.heart_1{
+    li{
+        
+        margin-left:24px;
+        font-size: 13px;
+    }
+    
+}
+.coeur{
+
+    li{list-style-image : url(../images/heart.png);}
+}
 .heart1{
-background-color: rgba(135, 187, 186, 0.5);
+
 padding-top: 10px;
 padding-bottom: 10px;
 -webkit-border-radius: 3px;
@@ -610,20 +651,20 @@ border-radius: 3px;
 background-color: rgba(135, 187, 186, 0.5);
 padding-top: 3px;
 padding-bottom: 3px;
--webkit-border-radius: 3px;
--moz-border-radius: 3px;
-border-radius: 3px;
+-webkit-border-radius: 1px;
+-moz-border-radius: 1px;
+border-radius: 1px;
 }
 
 .flags1{
-    list-style-image : url(../images/flagfr.png);
+    list-style-image : url(../images/fr.png);
 }
 
 .flags2{
-    list-style-image : url(../images/flages.png);
+    list-style-image : url(../images/es.png);
 }
 .flags3{
-    list-style-image : url(../images/flagfrpetit.png);
+    list-style-image : url(../images/en.png);
 
 }
                                    
@@ -643,7 +684,8 @@ border-radius: 3px;
 .flags{
 	@include size(20px);
 	border: none;
-    border-right: white 1px solid;
+    padding: 0px;
+
 }
 .flags img{
     @include size(20px);
@@ -681,7 +723,7 @@ border-radius: 3px;
 }
 .paris{
     margin-bottom:15px;
-    background-color: rgba(135, 187, 186, 0.5);
+  
 
 }
 
@@ -706,16 +748,23 @@ border-radius: 3px;
     .banner li { list-style: none; }
         .banner ul li { float: left; }
 /*slide */
+
 .h1welcome{
 font-family: 'Raleway';
 text-align: center;
 font-size: 62px;
 padding-bottom: 20px;
+color:white;
+text-shadow: 0px 0px 6px #bec3c7;
+  color: #fff;
+
 }
 
 .h2welcome{
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    color:white;
+    text-shadow: 0px 0px 6px #bec3c7;
 }
 .img_contact{
     width: 46px;
@@ -735,5 +784,118 @@ padding-bottom: 20px;
     font-family: 'dosis';
     font-weight: bold;
     font-size: 16px;
-    text-decoration:none;
+    text-align: right;
+    vertical-align: left;
+    
+  
+}
+#section-welcome-2{
+   background-color: 000;
+   background-size:cover;
+   height: 100%
+
+}
+.skills_img{
+    margin-top:20px;
+
+}
+.blue_header_span{
+    font-size: 50px;
+    color: $color-blue-juux;
+    font-family: dosis;
+    font-weight: normal;
+}
+
+.img_skill{
+    padding-right: 15px;
+}
+
+.h3_contact{
+    
+    text-align: center;
+}
+.title{
+    padding-left: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width:100%;
+}
+
+.margin_project{
+    margin-bottom: 15px;
+}
+
+.blue_txt{
+
+     color: $color-blue-juux;
+     
+}
+.map {
+    width: 100%;
+    vertical-align: middle;
+    
+}
+
+.fancySlider {
+    height: 222px;
+    overflow: hidden;
+}
+.titleabout{
+    font-size: 12px;
+    text-align: center;
+}
+.blueback{
+    background-image: url(../images/welcome_fond.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+}
+
+.padding_dev{
+    padding: 0px;
+    float:left;
+}
+.pad_contact{
+    padding-left: 20px;
+}
+.mail{
+           list-style-image: url(../images/pictomail.png);
+           list-style-position: outside;
+}
+.tel{
+           list-style-image: url(../images/pictotel.png);
+           list-style-position: outside;
+}
+.lieurecherche{
+           list-style-image: url(../images/pictolieu.png);
+           list-style-position: outside;
+}
+.sociaux{
+           list-style-image: url(../images/world.png);
+           list-style-position: outside;
+}
+.titre_about_h4{
+    width: 100%;
+    font-size: 13px;
+
+}
+.titre_about_h4_bis{
+    width: 100%;
+    font-size: 12px;
+
+}
+.mzellejuux{
+    font-family: 'Lobster Two';
+}
+.padding24{
+    padding-top: 24px;
+}
+.margin0{
+    margin: 0px;
+}
+.dev{
+
+    li{hyphens:auto;}
+    
 }
